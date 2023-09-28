@@ -89,7 +89,7 @@ func AsciiArt(inputText string, SymbolMap string) string {
 	var result strings.Builder
 
 	m := make(map[rune][]string)
-	content, err := os.ReadFile("templates/" + SymbolMap)
+	content, err := os.ReadFile("banner/" + SymbolMap)
 	if err != nil {
 		fmt.Println("Error reading input file:", err)
 		return result.String()
