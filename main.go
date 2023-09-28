@@ -42,7 +42,7 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 		// Parse form data
 		err := r.ParseForm()
 		if err != nil {
-			http.Error(w, "Bad request: 404", http.StatusInternalServerError)
+			http.Error(w, "Bad request: 404\nUnabe to parse form data", http.StatusBadRequest)
 			return
 		}
 
@@ -68,12 +68,10 @@ func homePageHandler(w http.ResponseWriter, r *http.Request) {
 
 func renderMainPage(w http.ResponseWriter, text string, data interface{}) {
 	// Create a struct to pass both text and data to the template
-	type PageData struct {
+	pageData := struct {
 		Text string
 		Data interface{}
-	}
-
-	pageData := PageData{
+	}{
 		Text: text,
 		Data: data,
 	}
