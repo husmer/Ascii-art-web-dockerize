@@ -1,0 +1,32 @@
+{{ define "mainhtml" }}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ascii-art-web</title>
+    <link rel="stylesheet" type="text/css" href="/templates/style.css">
+</head>
+<body>
+    <h1>ascii-art-web by ovilu</h1>
+    <form method="POST" action="/">
+        <div>
+            <label for="text">Text:</label>
+            <textarea id="text" name="text" rows="2" cols="60" placeholder="Enter text">{{.Text}}</textarea>
+            
+        </div>
+        <div>
+            <label>Banner:</label>
+            <input type="radio" name="banner" value="shadow"> Shadow
+            <input type="radio" name="banner" value="standard"> Standard
+            <input type="radio" name="banner" value="thinkertoy"> Thinkertoy
+        </div>
+        <div>
+            <button type="submit">Generate ASCII Art</button>
+        </div>
+    </form>
+    {{if .Data}}
+    <h2>ascii-art-web result:</h2>
+    <pre>{{.Data}}</pre>
+    {{end}}
+</body>
+</html>
+{{ end }}
