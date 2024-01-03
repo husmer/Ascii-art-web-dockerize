@@ -1,4 +1,4 @@
-# ascii-art-web-dockerize
+# Dockerized-ASCII-web
 
 ## Instructions
 1. Make sure you have the latest Docker installed
@@ -15,9 +15,6 @@ To shut down the server:
 ```bash
 docker compose down
 ```
-
-## Audit instructions: https://github.com/01-edu/public/tree/master/subjects/ascii-art-web/dockerize/audit
-
 You can also use commands listed in the audit page. e.g
 ```bash
 docker image ls
