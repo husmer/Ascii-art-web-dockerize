@@ -3,8 +3,8 @@
 ## Instructions
 1. Make sure you have the latest Docker installed
 Official Docker [link](https://docs.docker.com/get-docker/)
-2. run in terminal ```git clone https://01.kood.tech/git/ovilu/ascii-art-web-dockerize```
-3. Run these commands in the ascii-art-web-dockerize directory:
+
+3. Run these commands:
 To start the program:
 ```bash
 docker compose up
@@ -14,11 +14,6 @@ go to http://localhost:8080
 To shut down the server:
 ```bash
 docker compose down
-```
-You can also use commands listed in the audit page. e.g
-```bash
-docker image ls
-docker container ls
 ```
 
 
